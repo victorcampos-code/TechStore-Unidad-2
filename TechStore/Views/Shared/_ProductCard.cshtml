@@ -1,0 +1,71 @@
+﻿@model TechStore.Models.Producto
+
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+    <div class="product-card h-100">
+
+        <div class="product-image-container">
+
+            <img src="~/images/@Model.Imagen"
+                 class="product-image"
+                 alt="@Model.Nombre" />
+
+            <span class="product-category">
+                @Model.Categoria
+            </span>
+
+        </div>
+
+        <div class="product-content">
+
+            <h5 class="product-title">
+                @Model.Nombre
+            </h5>
+
+            <p class="product-description">
+                @Model.Descripcion
+            </p>
+
+            <div class="product-price">
+                $@Model.Precio.ToString("N2")
+            </div>
+
+            <div class="product-info">
+
+                <span class="stock-info">
+                    <i class="bi bi-box-seam"></i>
+                    Stock: @Model.Stock
+                </span>
+
+                @if (Model.Stock > 0)
+                {
+                    <span class="stock-badge available">
+                        <i class="bi bi-check-circle"></i>
+                        @Model.Estado
+                    </span>
+                }
+                else
+                {
+                    <span class="stock-badge unavailable">
+                        <i class="bi bi-x-circle"></i>
+                        Agotado
+                    </span>
+                }
+
+            </div>
+
+            <a asp-controller="Home"
+               asp-action="Producto"
+               asp-route-id="@Model.ID"
+               class="btn product-button w-100">
+
+                <i class="bi bi-eye"></i>
+                Ver producto
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

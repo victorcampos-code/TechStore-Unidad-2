@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<!-- 1. Sección principal / Bienvenida (Uso de Bootstrap) -->
+<div class="p-5 text-center bg-dark text-white rounded shadow-lg mb-5">
+    <h1 class="display-4 fw-bold">Bienvenido a TechStore</h1>
+    <p class="lead mt-3">Tu tienda en línea definitiva para hardware, componentes y accesorios de última generación.</p>
+    <hr class="bg-light w-50 mx-auto my-4">
+    <p>Equipa tu setup con la mejor tecnología del mercado.</p>
+    <a asp-controller="Producto" asp-action="Index" class="btn btn-primary btn-lg mt-3 shadow">
+        Explorar Catálogo Total
+    </a>
+</div>
+
+<!-- 2. Enlaces a las principales secciones (Uso de Flexbox) -->
+<div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+    <a asp-controller="Categoria" asp-action="Index" class="btn btn-outline-dark px-4 py-2 shadow-sm">
+        Ver Categorías
+    </a>
+    <a asp-controller="Home" asp-action="AcercaDe" class="btn btn-outline-dark px-4 py-2 shadow-sm">
+        Conoce Nuestra Historia
+    </a>
+    <a asp-controller="Home" asp-action="Contactenos" class="btn btn-outline-dark px-4 py-2 shadow-sm">
+        Atención al Cliente
+    </a>
+</div>
+
+<!-- 3. Productos Destacados -->
+<div class="container mt-4">
+    <h3 class="text-center mb-4 pb-2 border-bottom">Productos Destacados</h3>
+
+    <div class="row">
+        <!-- Destacado 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="~/images/prod1.jpg" class="card-img-top p-4" alt="MSI RTX 5060 Ti" style="height: 250px; object-fit: contain;">
+                <div class="card-body text-center d-flex flex-column border-top">
+                    <h5 class="card-title">MSI RTX 5060 Ti</h5>
+                    <p class="card-text text-muted">Rendimiento extremo para gaming.</p>
+                    <a asp-controller="Producto" asp-action="Index" class="btn btn-outline-dark mt-auto">Ver en Tienda</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destacado 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="~/images/prod4.jpg" class="card-img-top p-4" alt="Case Thermaltake" style="height: 250px; object-fit: contain;">
+                <div class="card-body text-center d-flex flex-column border-top">
+                    <h5 class="card-title">Case Thermaltake Tower</h5>
+                    <p class="card-text text-muted">Diseño vertical con vidrio templado.</p>
+                    <a asp-controller="Producto" asp-action="Index" class="btn btn-outline-dark mt-auto">Ver en Tienda</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destacado 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="~/images/prod6.jpg" class="card-img-top p-4" alt="Audífonos Logitech" style="height: 250px; object-fit: contain;">
+                <div class="card-body text-center d-flex flex-column border-top">
+                    <h5 class="card-title">Logitech G535</h5>
+                    <p class="card-text text-muted">Audio inalámbrico sin retrasos.</p>
+                    <a asp-controller="Producto" asp-action="Index" class="btn btn-outline-dark mt-auto">Ver en Tienda</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

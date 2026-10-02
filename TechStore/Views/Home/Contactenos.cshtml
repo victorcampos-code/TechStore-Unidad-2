@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Contáctenos";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Contáctenos</h2>
+    <div class="row">
+        <!-- Formulario -->
+        <div class="col-md-7 mb-4">
+            <div class="card shadow-sm p-4">
+                <h4 class="mb-3">Envíanos un mensaje</h4>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Asunto</label>
+                        <input type="text" class="form-control" placeholder="Motivo de tu mensaje" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="col-md-5">
+            <div class="card shadow-sm p-4 bg-dark text-white h-100">
+                <h4 class="mb-4">Información Empresarial</h4>
+                <p><strong><i class="bi bi-geo-alt"></i> Dirección:</strong> 123 Bulevar Tecnológico, San Salvador.</p>
+                <p><strong><i class="bi bi-telephone"></i> Teléfono:</strong> +503 2222-3333</p>
+                <p><strong><i class="bi bi-envelope"></i> Correo:</strong> info@techstore.com</p>
+                <hr class="bg-light" />
+                <h5>Horario de Atención</h5>
+                <p>Lunes a Viernes: 8:00 AM - 5:00 PM<br />Sábados: 8:00 AM - 12:00 MD</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<TechStore.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Categorías";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-5">
+
+        <span class="section-label">
+            EXPLORA NUESTRO CATÁLOGO
+        </span>
+
+        <h2 class="fw-bold mt-2">
+            Nuestras Categorías
+        </h2>
+
+        <p class="text-muted">
+            Encuentra la tecnología que necesitas para tu setup.
+        </p>
+
+    </div>
+
+    <div class="row justify-content-center g-4">
+
+        @foreach (var categoria in Model)
+        {
+            <div class="col-xl-5 col-lg-6 col-md-6">
+
+                <a asp-controller="Home"
+                   asp-action="Productos"
+                   asp-route-categoria="@categoria.Nombre"
+                   class="category-link">
+
+                    <div class="category-card">
+
+                        <div class="category-icon">
+
+                            @if (categoria.Nombre == "Tarjetas de Video")
+                            {
+                                <i class="bi bi-cpu"></i>
+                            }
+                            else if (categoria.Nombre == "Componentes")
+                            {
+                                <i class="bi bi-pc-display"></i>
+                            }
+                            else if (categoria.Nombre == "Accesorios")
+                            {
+                                <i class="bi bi-tools"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-headset"></i>
+                            }
+
+                        </div>
+
+                        <div class="category-content">
+
+                            <h4>
+                                @categoria.Nombre
+                            </h4>
+
+                            <p>
+                                @categoria.Descripcion
+                            </p>
+
+                            <span class="category-action">
+                                Ver productos
+                                <i class="bi bi-arrow-right"></i>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+        }
+
+    </div>
+
+</div>
